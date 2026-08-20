@@ -504,7 +504,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Apply 3D perspective transformations dynamically on Scroll (Active page scale(1), adjacent scale(0.96))
     function handleScrollTransforms() {
-        if (window.innerWidth <= 768) return;
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.page-content-wrapper').forEach(wrapper => {
+                wrapper.style.transform = '';
+                wrapper.style.opacity = '';
+            });
+            return;
+        }
         
         const scrollLeft = scrollContainer.scrollLeft;
         const width = window.innerWidth;
@@ -609,10 +615,21 @@ document.addEventListener('DOMContentLoaded', function() {
         
         isAnimating = true;
         currentPageIndex = index;
-        scrollContainer.scrollTo({
-            left: index * window.innerWidth,
-            behavior: 'smooth'
-        });
+        
+        if (window.innerWidth <= 768) {
+            const targetSection = sections[index];
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60, // offset for fixed header
+                    behavior: 'smooth'
+                });
+            }
+        } else {
+            scrollContainer.scrollTo({
+                left: index * window.innerWidth,
+                behavior: 'smooth'
+            });
+        }
 
         setTimeout(() => {
             isAnimating = false;

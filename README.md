@@ -136,7 +136,46 @@ A basic web server to serve the static assets and enable modules (optional but r
 
 ---
 
-## 🎨 Theme & Typography
+## 🎨 Theme, Colors & Typography
 
-* **Color Palette**: Dark cyberpunk theme (Deep purple, Neon magenta, Dark charcoal bases, White content text).
-* **Primary Fonts**: Modern sans-serif stacks featuring heavy geometric headings and clean, readable monospace details.
+### 🔴 Color Scheme Palette
+We utilize a dark cyberpunk palette to achieve a modern, premium aesthetic:
+
+| Color Role | Hex Code | Visual Swatch | Emojis |
+| :--- | :--- | :--- | :--- |
+| **Deep Dark Background (Base)** | `#050206` | `![#050206](https://img.shields.io/badge/Swatch-%23050206-050206?style=flat-square)` | ⬛🌌 |
+| **Neon Magenta Accent (Highlights/Active)** | `#FF2B8A` | `![#FF2B8A](https://img.shields.io/badge/Swatch-%23FF2B8A-FF2B8A?style=flat-square)` | 🟥💖 |
+| **Deep Purple Accent (Theme/Curves)** | `#9B5CFF` | `![#9B5CFF](https://img.shields.io/badge/Swatch-%239B5CFF-9B5CFF?style=flat-square)` | 🟪💜 |
+| **Card Borders / Hover Backgrounds** | `#1a0e1b` | `![#1a0e1b](https://img.shields.io/badge/Swatch-%231a0e1b-1a0e1b?style=flat-square)` | 🟫🪵 |
+| **Primary Text Color** | `#f8fafc` | `![#f8fafc](https://img.shields.io/badge/Swatch-%23f8fafc-f8fafc?style=flat-square)` | ⬜✉️ |
+
+* **Primary Fonts**: Modern sans-serif stacks featuring heavy geometric headings (`Outfit`) and clean, readable monospace details (`JetBrains Mono`).
+
+---
+
+### 📸 Portfolio Assets & Layout Gallery
+Here are the core visual assets and layouts integrated into the portfolio experience:
+
+#### 1. Landing & Profile Identity
+* **Hero Image**: Modern stylized tech character walking, representing interactive 3D motion.
+  ![Hero Character Landing Image](public/images/hero_woman.jpg)
+* **Profile Image**: Professional portrait featured in the About/Flip Card segment.
+  ![Profile Picture](public/images/profile.jpg)
+
+#### 2. Featured Projects Grid
+* **PetHub**: Pet adoption platform featuring dynamic search filters.
+  ![PetHub Project Screenshot](public/projects/pethub.png)
+* **CareerPilot AI**: AI-powered resume and career assistant dashboard.
+  ![CareerPilot AI Project Screenshot](public/projects/careerpilot.png)
+* **TechNova**: Multi-agent software dev platform.
+  ![TechNova Project Screenshot](public/projects/technova.png)
+* **LOC8**: Live geolocation locator map tracking system.
+  ![LOC8 Project Screenshot](public/projects/loc8.png)
+* **Watch Luxora**: Cyberpunk-themed premium luxury watch showroom catalog.
+  ![Watch Luxora Project Screenshot](public/projects/watch-luxora.png)
+* **NutriVision**: AI computer vision calorie counter model.
+  ![NutriVision Project Screenshot](public/projects/nutrivision.png)
+
+#### 3. Low-Level Development & Systems
+* **FlyRank**: High-performance sorting simulator.
+  ![FlyRank Project Screenshot](public/projects/flyrank.png)

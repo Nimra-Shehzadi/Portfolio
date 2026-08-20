@@ -1920,38 +1920,76 @@ footer {
 
 /* --- Mobile Snap Swiping Layout --- */
 @media screen and (max-width: 768px) {
-    body, html {
-        overflow-x: hidden;
-        overflow-y: hidden;
+    html {
+        overflow-x: hidden !important;
+        overflow-y: scroll !important; /* Force scrollbar */
+        height: auto !important;
+        width: 100% !important;
+    }
+    body {
+        overflow-x: hidden !important;
+        overflow-y: scroll !important; /* Force scrollbar */
+        height: auto !important;
+        width: 100% !important;
     }
 
     .scroll-container {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        width: 100vw;
-        height: 100vh;
+        display: flex !important;
+        flex-direction: column !important; /* Stack sections vertically */
+        width: 100% !important;
+        height: auto !important;
+        overflow-y: visible !important; /* Allow body scrolling */
+        overflow-x: hidden !important;
+        scroll-snap-type: none !important; /* Disable snapping */
+        scrollbar-width: none;
     }
 
     .page-section {
-        flex: 0 0 100vw;
-        width: 100vw;
-        height: 100vh;
-        scroll-snap-align: start;
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding-top: 100px;
-        padding-bottom: 80px;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        height: auto !important; /* Let height adapt dynamically */
+        min-height: 100vh !important; /* Fill at least the screen */
+        scroll-snap-align: none !important;
+        overflow: visible !important;
+        padding-top: 100px !important;
+        padding-bottom: 80px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important; /* Align content to the top */
+        align-items: center !important;
+        perspective: none !important; /* Disable 3D perspective to prevent WebKit rendering bugs */
     }
 
     .page-content-wrapper {
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
         transform: none !important;
         opacity: 1 !important;
+        display: block !important;
+        overflow: visible !important;
+        transform-style: flat !important; /* Flatten 3D context to make visible */
+        backface-visibility: visible !important;
+    }
+
+    .container {
+        padding: 0 1.25rem !important; /* Safety margin for text/cards on mobile */
+        width: 100% !important;
+    }
+
+    .section-header {
+        margin-bottom: 2rem !important; /* Preserves vertical layout space */
+    }
+
+    .section-title-alt {
+        font-size: clamp(2rem, 7vw, 2.5rem) !important; /* Prevent heading clipping */
+        line-height: 1.25 !important;
+        text-align: center !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
     }
 
     nav {
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.25rem;
     }
 
     .burger {
@@ -1972,13 +2010,22 @@ footer {
         align-items: center;
         width: 70%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
         z-index: 1000;
         gap: 2rem;
+        visibility: hidden; /* Prevent horizontal scrolling/tabbing when closed */
+        pointer-events: none;
     }
 
     .nav-links.nav-active {
         transform: translateX(0%);
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
     }
 
     .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
@@ -1993,7 +2040,7 @@ footer {
     .hero-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        gap: 2.5rem;
+        gap: 2rem;
         height: auto;
     }
 
@@ -2002,31 +2049,71 @@ footer {
         align-items: center;
     }
 
+    .badge-pill {
+        align-self: center !important;
+        text-align: center !important;
+        white-space: normal !important;
+        font-size: clamp(0.7rem, 2.8vw, 0.8rem) !important;
+        max-width: 100%;
+        line-height: 1.4;
+        padding: 0.5rem 1rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+
     .hero-name-heading {
-        font-size: 3.2rem !important;
-        line-height: 1.1;
+        font-size: clamp(2.2rem, 8vw, 3rem) !important;
+        line-height: 1.15 !important;
+        word-wrap: break-word !important;
+        margin-bottom: 1rem !important;
     }
 
     .hero-secondary-heading {
-        font-size: 1.6rem;
+        font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    .hero-content .description {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 2rem !important;
+        padding: 0 0.5rem;
     }
 
     .hero-actions {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0.75rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+
+    .hero-socials {
+        justify-content: center;
+        gap: 1rem !important;
     }
 
     .hero-visual {
-        height: 380px;
+        height: auto;
+        margin-top: 1rem;
     }
 
     .hero-visual::before {
-        width: 280px;
-        height: 360px;
+        width: 240px;
+        height: 300px;
     }
 
     .hero-character-wrapper {
-        width: 260px;
-        height: 340px;
+        width: 240px;
+        height: 310px;
     }
 
     .skills-page-glove {
@@ -2036,64 +2123,320 @@ footer {
     /* About Mobile */
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     .about-card-container {
         order: -1;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-flip-card {
+        width: 240px !important;
+        height: 290px !important;
+    }
+
+    .about-card-front {
+        transform: rotateY(0deg) !important; /* Ensure WebKit renders front side correctly */
+        z-index: 2;
+    }
+
+    .about-details {
+        text-align: center;
+    }
+
+    .about-details h3 {
+        font-size: clamp(1.3rem, 5vw, 1.6rem) !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .about-details p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
     }
 
     .stats-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr) !important; /* Row-based for vertical compression */
+        gap: 0.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .stat-box {
+        padding: 0.75rem 0.35rem !important;
+        border-radius: 8px !important;
+    }
+
+    .stat-num {
+        font-size: clamp(1.3rem, 5vw, 1.7rem) !important;
+    }
+
+    .stat-label {
+        font-size: 0.65rem !important;
+        line-height: 1.2;
     }
 
     /* Skills Mobile */
     .skills-grid-horizontal {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    /* Projects Mobile */
-    .projects-horizontal-layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        height: auto;
-        gap: 2rem;
-    }
-
-    .projects-carousel-track {
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .project-card {
-        flex: 1 1 auto;
-        max-width: 330px;
-    }
-
-    /* AI Mobile */
-    .ai-horizontal-featured-block {
-        flex-direction: column;
-        height: auto;
-        max-height: none;
-        padding: 1.5rem;
         gap: 1.5rem;
     }
 
+    .skills-card {
+        padding: 1.25rem !important;
+    }
+
+    .skills-card-header {
+        margin-bottom: 1rem !important;
+    }
+
+    .skills-card-header i {
+        font-size: 1.35rem !important;
+    }
+
+    .skills-card-header h3 {
+        font-size: 1.15rem !important;
+    }
+
+    .skill-badge {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* Skills Rotator Scaler */
+    .carousel-showcase-compact {
+        height: 220px !important;
+        padding: 1.25rem !important;
+    }
+
+    .scene {
+        transform: scale(0.85) !important;
+        transform-origin: center top !important;
+        margin: 0 auto !important;
+    }
+
+    /* Projects Mobile */
+    .carousel-navigation-arrows {
+        display: none !important; /* Hide desktop navigation buttons */
+    }
+
+    .projects-carousel-outer {
+        display: block !important; /* Disables flex layout constraints */
+        overflow: visible !important; /* Makes sure all stacked projects appear */
+        width: 100% !important;
+        height: auto !important;
+        padding: 0.5rem 0 !important;
+    }
+
+    .projects-carousel-track {
+        display: flex !important;
+        flex-direction: column !important; /* Stack cards vertically */
+        align-items: center !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        transform: none !important; /* Disable any script-driven horizontal translation */
+    }
+
+    .project-card {
+        width: 100% !important;
+        max-width: 290px !important; /* Comfortably fits 320px screens */
+        height: auto !important; /* Dynamic height */
+        flex: 0 0 auto !important;
+    }
+
+    .project-image-wrapper {
+        height: 150px !important;
+    }
+
+    .project-info {
+        padding: 1.25rem !important;
+        height: auto !important;
+        min-height: unset !important;
+    }
+
+    .project-info h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .project-info p {
+        height: auto !important;
+        margin-bottom: 1rem !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
+    }
+
+    .project-tech {
+        height: auto !important;
+        margin-bottom: 1.25rem !important;
+        overflow: visible !important;
+    }
+
+    .project-links {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+    }
+
+    .project-links .btn {
+        width: 100% !important;
+        padding: 0.7rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* AI Mobile */
+    .ai-page-container {
+        padding-top: 2rem !important;
+        width: 100% !important;
+    }
+
+    .ai-horizontal-featured-block {
+        flex-direction: column !important;
+        height: auto !important;
+        max-height: none !important;
+        padding: 1.25rem !important;
+        gap: 1.25rem !important;
+        width: 100% !important;
+    }
+
     .ai-featured-image-wrapper {
-        width: 100%;
-        height: 200px;
+        width: 100% !important;
+        height: 160px !important;
     }
 
     .ai-featured-info {
-        width: 100%;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .ai-featured-info h4 {
+        font-size: 1.3rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .ai-featured-info p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    .ai-featured-tech {
+        justify-content: center !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    .ai-featured-links {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+    }
+
+    .ai-featured-links .btn {
+        width: 100% !important;
+        padding: 0.7rem 1rem !important;
     }
 
     /* Systems Mobile */
+    .systems-page-container {
+        padding-top: 2rem !important;
+        width: 100% !important;
+    }
+
     .systems-projects-row {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin-top: 1rem !important;
+        justify-items: center !important;
+        width: 100% !important;
+    }
+
+    .systems-projects-row .project-card {
+        max-width: 290px !important;
+    }
+
+    /* Certifications Mobile */
+    .certs-section-new {
+        margin-top: 0.5rem !important;
+        width: 100% !important;
+    }
+
+    .certs-header-new {
+        margin-top: 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .certs-title-new {
+        font-size: 1.25rem !important;
+    }
+
+    .certs-carousel-outer {
+        height: auto !important; /* Let outer box grow vertically */
+        overflow: visible !important;
+        perspective: none !important;
+    }
+
+    .certs-carousel-track {
+        display: flex !important;
+        flex-direction: column !important; /* Stack certifications vertically */
+        align-items: center !important;
+        gap: 1.5rem !important;
+        height: auto !important;
+        transform: none !important;
+        transform-style: flat !important;
+    }
+
+    .cert-card-compact {
+        position: relative !important; /* Override absolute positioning */
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        max-width: 290px !important; /* Center fit mobile */
+        height: auto !important; /* Allow height to adapt */
+        flex: 0 0 auto !important;
+        transform: none !important; /* Ignore JS horizontal coverflow transforms */
+        transform-style: flat !important;
+        backface-visibility: visible !important;
+        opacity: 1 !important; /* Render all cards visible */
+        pointer-events: auto !important;
+        z-index: 1 !important;
+    }
+
+    .cert-card-image-wrapper {
+        height: 120px !important;
+    }
+
+    .cert-card-body {
+        opacity: 1 !important; /* Force visible */
+        pointer-events: auto !important;
+        height: auto !important;
+        border-top: 1px solid var(--border-color);
+        background-color: #120308;
+        padding: 1rem !important;
+    }
+
+    .cert-card-body h5 {
+        font-size: 0.85rem !important;
+        height: auto !important;
+        margin-bottom: 0.5rem !important;
+        -webkit-line-clamp: unset !important;
+    }
+
+    .cert-issuer {
+        font-size: 0.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .cert-card-body .btn {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
+        margin-top: 0.5rem !important;
+        padding: 0.65rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .certs-carousel-controls {
+        display: none !important; /* Hide arrows since list is vertically scrollable */
     }
 
     /* Experience Mobile */
@@ -2102,16 +2445,41 @@ footer {
         gap: 1.5rem;
     }
 
-
-
     /* Contact Mobile */
+    .contact-header h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem) !important;
+    }
+
+    .contact-header p {
+        font-size: 0.95rem !important;
+        margin-bottom: 2rem !important;
+    }
+
     .contact-links-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
     }
 
     .contact-card {
-        padding: 1.5rem 1rem;
+        padding: 1.25rem 1rem !important;
+        border-radius: 12px !important;
+    }
+
+    .contact-card i {
+        font-size: 1.6rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .contact-card span {
+        font-size: 0.75rem !important;
+    }
+
+    .contact-card h4 {
+        font-size: 0.85rem !important;
+    }
+
+    .card-desc {
+        font-size: 0.7rem !important;
     }
 
     .modal-content {
@@ -2124,6 +2492,12 @@ footer {
 
     .exp-card-new, .edu-card-new {
         min-height: auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .scene {
+        transform: scale(0.72) !important;
     }
 }
 
