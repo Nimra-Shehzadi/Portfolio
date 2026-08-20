@@ -153,28 +153,7 @@ We utilize a dark cyberpunk palette to achieve a modern, premium aesthetic:
 
 ---
 
-### 📸 Portfolio Assets & Layout Gallery
-Here are the core visual assets and layouts integrated into the portfolio experience:
 
-#### 1. Landing & Profile Identity
-* **Hero Image**: Modern stylized tech character walking, representing interactive 3D motion.
-  ![Hero Character Landing Image](public/images/hero_woman.jpg)
-* **Profile Image**: Professional portrait featured in the About/Flip Card segment.
-  ![Profile Picture](public/images/profile.jpg)
-
-#### 2. Featured Projects Grid
-* **PetHub**: Pet adoption platform featuring dynamic search filters.
-  ![PetHub Project Screenshot](public/projects/pethub.png)
-* **CareerPilot AI**: AI-powered resume and career assistant dashboard.
-  ![CareerPilot AI Project Screenshot](public/projects/careerpilot.png)
-* **TechNova**: Multi-agent software dev platform.
-  ![TechNova Project Screenshot](public/projects/technova.png)
-* **LOC8**: Live geolocation locator map tracking system.
-  ![LOC8 Project Screenshot](public/projects/loc8.png)
-* **Watch Luxora**: Cyberpunk-themed premium luxury watch showroom catalog.
-  ![Watch Luxora Project Screenshot](public/projects/watch-luxora.png)
-* **NutriVision**: AI computer vision calorie counter model.
-  ![NutriVision Project Screenshot](public/projects/nutrivision.png)
 
 #### 3. Low-Level Development & Systems
 * **FlyRank**: High-performance sorting simulator.
