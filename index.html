@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Metadata -->
+    <title>Nimra Shehzadi | Immersive 3D Portfolio</title>
+    <meta name="description" content="Professional portfolio of Nimra Shehzadi, a Full-Stack Developer, Frontend Engineer, and AI Enthusiast. Specializing in React, Next.js, Python, and AI-powered web applications.">
+    <meta name="keywords" content="Nimra Shehzadi, Full-Stack Developer, Frontend Engineer, AI Engineer, React, Next.js, Pakistan Developer, Web Portfolio">
+    <meta name="author" content="Nimra Shehzadi">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://personal-portfolio-eta-ten-65.vercel.app/">
+    <meta property="og:title" content="Nimra Shehzadi | Full-Stack Developer & AI Enthusiast">
+    <meta property="og:description" content="Discover modern web applications and AI-powered workflows built by Nimra Shehzadi.">
+    <meta property="og:image" content="images/profile.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-home">
+
+    <!-- Ambient background mesh gradients are handled directly in style.css page-sections -->
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="#hero" class="logo" aria-label="Nimra Shehzadi Home">NIMRA<span class="logo-dot"></span></a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-anchor active" data-index="0">Home</a></li>
+                <li><a href="#about" class="nav-anchor" data-index="1">About</a></li>
+                <li><a href="#skills" class="nav-anchor" data-index="2">Skills</a></li>
+                <li><a href="#projects-web" class="nav-anchor" data-index="3">Web</a></li>
+                <li><a href="#projects-ai" class="nav-anchor" data-index="4">AI & Python</a></li>
+                <li><a href="#projects-systems" class="nav-anchor" data-index="5">Systems</a></li>
+                <li><a href="#experience" class="nav-anchor" data-index="6">Experience</a></li>
+                <li><a href="#contact" class="nav-anchor" data-index="7">Contact</a></li>
+            </ul>
+            <button class="burger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Progress Indicators -->
+    <div class="page-progress-container">
+        <span class="page-number" id="page-number-display">01 / 08</span>
+        <div class="progress-dots">
+            <span class="progress-dot active" data-index="0" title="Home"></span>
+            <span class="progress-dot" data-index="1" title="About"></span>
+            <span class="progress-dot" data-index="2" title="Skills"></span>
+            <span class="progress-dot" data-index="3" title="Web Dev"></span>
+            <span class="progress-dot" data-index="4" title="AI & Python"></span>
+            <span class="progress-dot" data-index="5" title="Academic Systems"></span>
+            <span class="progress-dot" data-index="6" title="Experience"></span>
+            <span class="progress-dot" data-index="7" title="Contact"></span>
+        </div>
+    </div>
+
+    <!-- Main Horizontal Scroll Container -->
+    <main class="scroll-container">
+        
+        <!-- PAGE 01: HOME / INTRO -->
+        <section id="hero" class="page-section" data-theme="home">
+            <div class="page-content-wrapper">
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <div class="badge-pill stage-5-reveal">
+                            <span class="badge-dot"></span>
+                            FULL-STACK DEVELOPER • FRONTEND ENGINEER • AI ENTHUSIAST
+                        </div>
+                        <h1 class="text-gradient stage-5-reveal hero-name-heading">Hi, I'm Nimra Shehzadi.</h1>
+                        <h2 class="stage-6-reveal hero-secondary-heading">I build <span id="typing-text" class="accent-glow-gradient" style="color: var(--accent-current); font-weight: 700;"></span></h2>
+                        <p class="description stage-6-reveal">
+                            Building modern web experiences and intelligent applications with clean UI, scalable architecture, and AI-powered solutions.
+                        </p>
+                        <div class="hero-actions stage-7-reveal">
+                            <a href="#projects-web" class="btn btn-primary nav-action-btn" data-index="3"><i class="fas fa-eye"></i> View Projects</a>
+                            <a href="https://github.com/Nimra-shehzadi" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#contact" class="btn btn-secondary nav-action-btn" data-index="7"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                        </div>
+                        <div class="hero-socials stage-7-reveal">
+                            <span>Profiles</span>
+                            <div class="social-links">
+                                <a href="https://github.com/Nimra-shehzadi" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/nimra-shehzadi-22262338a/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="mailto:nimra.shehzadi.5094@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <!-- Soft glow / gradient aura behind woman image is handled via CSS .hero-visual::before -->
+                        <div class="hero-character-wrapper stage-4-reveal">
+                            <div class="character-frame">
+                                <img src="images/hero_woman.png" alt="Nimra Shehzadi walking forward, confident young professional software developer in a modern pantsuit" class="walking-character">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 02: ABOUT ME -->
+        <section id="about" class="page-section" data-theme="about">
+            <div class="page-content-wrapper">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Introduction</span>
+                        <h2 class="section-title-alt">About Me</h2>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-details">
+                            <h3>Crafting Digital Solutions</h3>
+                            <p>I'm Nimra Shehzadi, a Computer Science student (BS Computer Science — 7th Semester) and versatile developer based in Pakistan, with a strong passion for building robust, intelligent, and efficient applications.</p>
+                            <p>My technical journey began with core programming fundamentals in C++ and Python and has expanded into modern full-stack web development (React / Next.js), databases, and network architectures. I enjoy tackling complex logic puzzles and transforming them into accessible web applications.</p>
+                            <p>Currently, I focus on integrating AI-assisted workflows and building interactive user interfaces that deliver premium experiences and real-world value.</p>
+                            
+                            <!-- Stats Dashboard -->
+                            <div class="stats-container">
+                                <div class="stat-box">
+                                    <span class="stat-num">7th</span>
+                                    <span class="stat-label">Semester CS</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-num">12+</span>
+                                    <span class="stat-label">Projects Built</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-num">AI</span>
+                                    <span class="stat-label">Internship</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-card-container">
+                            <div class="about-flip-card">
+                                <div class="about-flip-card-inner">
+                                    <div class="about-card-front">
+                                        <img src="public/images/profile.jpg" alt="Nimra Shehzadi - Interactive Photo">
+                                    </div>
+                                    <div class="about-card-back">
+                                        <h4>Nimra Shehzadi</h4>
+                                        <p style="font-size: 0.9rem; color: var(--text-primary); margin-top: 0.5rem;">BS Computer Science — 7th Semester</p>
+                                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1rem; font-family: var(--font-mono);">Click to rotate back</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 03: SKILLS -->
+        <section id="skills" class="page-section" data-theme="skills">
+            <div class="page-content-wrapper">
+                <!-- Cybernetic 3D-styled Glove (Floating in Background of Page 03) -->
+                <div class="glove-container skills-page-glove">
+                    <div class="glove-element">
+                        <svg viewBox="0 0 100 100" class="glove-svg">
+                            <defs>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+                            <g filter="url(#glow)" stroke="var(--accent-current)" stroke-width="1.2" fill="none" opacity="0.85">
+                                <!-- Palm base and wrist links -->
+                                <path d="M35 70 L25 52 L35 30 L46 27 L57 30 L67 52 L60 70 Z" />
+                                <path d="M48 70 L48 82 M38 88 L48 82 L58 88" stroke-width="0.8" stroke-dasharray="1.5,1.5" />
+                                <!-- Thumb -->
+                                <path d="M25 52 L14 43 L8 46 L13 58" />
+                                <!-- Index -->
+                                <path d="M35 30 L34 11 L38 5 L42 11 L41 30" />
+                                <!-- Middle -->
+                                <path d="M46 27 L46 6 L50 1 L54 6 L53 27" />
+                                <!-- Ring -->
+                                <path d="M57 30 L58 11 L62 6 L66 12 L63 30" />
+                                <!-- Pinky -->
+                                <path d="M67 52 L73 32 L77 29 L79 33 L73 52" />
+                                <!-- Node Points -->
+                                <circle cx="35" cy="70" r="1.5" fill="var(--accent-current)" />
+                                <circle cx="60" cy="70" r="1.5" fill="var(--accent-current)" />
+                                <circle cx="25" cy="52" r="1.5" fill="var(--accent-current)" />
+                                <circle cx="67" cy="52" r="1.5" fill="var(--accent-current)" />
+                                <circle cx="35" cy="30" r="1.5" fill="var(--accent-current)" />
+                                <circle cx="46" cy="27" r="1.5" fill="var(--accent-current)" />
+                                <circle cx="57" cy="30" r="1.5" fill="var(--accent-current)" />
+                                <circle cx="8" cy="46" r="1.2" fill="var(--accent-current)" />
+                                <circle cx="38" cy="5" r="1.2" fill="var(--accent-current)" />
+                                <circle cx="50" cy="1" r="1.2" fill="var(--accent-current)" />
+                                <circle cx="62" cy="6" r="1.2" fill="var(--accent-current)" />
+                                <circle cx="77" cy="29" r="1.2" fill="var(--accent-current)" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Toolbox</span>
+                        <h2 class="section-title-alt">Technical Skills</h2>
+                    </div>
+                    
+                    <div class="skills-grid-horizontal">
+                        <div class="skills-column">
+                            <!-- Languages -->
+                            <div class="skills-card">
+                                <div class="skills-card-header">
+                                    <i class="fa-solid fa-code"></i>
+                                    <h3>Languages</h3>
+                                </div>
+                                <div class="skill-badges">
+                                    <span class="skill-badge">C++</span>
+                                    <span class="skill-badge">C#</span>
+                                    <span class="skill-badge">Python</span>
+                                    <span class="skill-badge">JavaScript</span>
+                                    <span class="skill-badge">TypeScript</span>
+                                    <span class="skill-badge">PHP</span>
+                                    <span class="skill-badge">HTML5</span>
+                                    <span class="skill-badge">CSS3</span>
+                                    <span class="skill-badge">SQL</span>
+                                </div>
+                            </div>
+
+                            <!-- Frontend & Tools -->
+                            <div class="skills-card">
+                                <div class="skills-card-header">
+                                    <i class="fa-brands fa-react"></i>
+                                    <h3>Frontend & Tools</h3>
+                                </div>
+                                <div class="skill-badges">
+                                    <span class="skill-badge">React.js</span>
+                                    <span class="skill-badge">Next.js</span>
+                                    <span class="skill-badge">Tailwind CSS</span>
+                                    <span class="skill-badge">Redux</span>
+                                    <span class="skill-badge">Git / GitHub</span>
+                                    <span class="skill-badge">VS Code</span>
+                                    <span class="skill-badge">Vercel</span>
+                                    <span class="skill-badge">npm</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-column">
+                            <!-- Backend & AI -->
+                            <div class="skills-card">
+                                <div class="skills-card-header">
+                                    <i class="fa-solid fa-brain"></i>
+                                    <h3>Backend & AI/ML</h3>
+                                </div>
+                                <div class="skill-badges">
+                                    <span class="skill-badge">Node.js</span>
+                                    <span class="skill-badge">PHP / MySQL</span>
+                                    <span class="skill-badge">REST APIs</span>
+                                    <span class="skill-badge">TensorFlow</span>
+                                    <span class="skill-badge">Machine Learning</span>
+                                    <span class="skill-badge">Computer Vision</span>
+                                    <span class="skill-badge">Prompt Engineering</span>
+                                    <span class="skill-badge">AI Workflows / Agents</span>
+                                </div>
+                            </div>
+
+                            <!-- 3D Competencies Carousel -->
+                            <div class="carousel-showcase-compact">
+                                <h3>Domain Rotator</h3>
+                                <div class="scene">
+                                    <div class="carousel">
+                                        <div class="carousel__cell"><div class="carousel__cell-content"><i class="fa-solid fa-network-wired"></i><span>Networking</span></div></div>
+                                        <div class="carousel__cell"><div class="carousel__cell-content"><i class="fa-solid fa-microchip"></i><span>Assembly</span></div></div>
+                                        <div class="carousel__cell"><div class="carousel__cell-content"><i class="fa-brands fa-html5"></i><span>Web Tech</span></div></div>
+                                        <div class="carousel__cell"><div class="carousel__cell-content"><i class="fa-solid fa-file-code"></i><span>C / C++</span></div></div>
+                                        <div class="carousel__cell"><div class="carousel__cell-content"><i class="fa-brands fa-python"></i><span>Python</span></div></div>
+                                        <div class="carousel__cell"><div class="carousel__cell-content"><i class="fa-solid fa-database"></i><span>Databases</span></div></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-nav">
+                                    <button class="carousel-button" id="prev-button" aria-label="Previous Competency"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="carousel-button" id="next-button" aria-label="Next Competency"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 04: WEB DEVELOPMENT -->
+        <section id="projects-web" class="page-section" data-theme="web">
+            <div class="page-content-wrapper">
+                <div class="container">
+                    <div class="category-showcase-header">
+                        <div class="showcase-title-row">
+                            <div>
+                                <span class="section-badge">Featured Portfolio</span>
+                                <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+                            </div>
+                            <!-- Prev/Next Controls -->
+                            <div class="carousel-navigation-arrows">
+                                <button class="carousel-arrow-btn prev-arrow" id="web-prev" aria-label="Previous Web Projects"><i class="fas fa-chevron-left"></i></button>
+                                <button class="carousel-arrow-btn next-arrow" id="web-next" aria-label="Next Web Projects"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <p class="showcase-subtitle">Building responsive, scalable and modern digital experiences.</p>
+                    </div>
+                    
+                    <div class="projects-carousel-outer">
+                        <div class="projects-carousel-track" id="web-projects-grid">
+                            <!-- Dynamic project cards rendered identically via Javascript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 05: AI & PYTHON -->
+        <section id="projects-ai" class="page-section" data-theme="ai">
+            <div class="page-content-wrapper">
+                <div class="container ai-page-container">
+                    <div class="category-showcase-header">
+                        <span class="section-badge">Intelligence & Code</span>
+                        <h3><i class="fas fa-brain"></i> AI & Python Systems</h3>
+                        <p>Exploring intelligent applications through Python, machine learning and computer vision.</p>
+                    </div>
+
+                    <!-- NutriVision AI featured as full horizontal row inside viewport -->
+                    <div id="ai-featured-container" class="ai-horizontal-featured-block">
+                        <!-- Dynamic NutriVision featured block rendered via Javascript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 06: OTHER / ACADEMIC PROJECTS -->
+        <section id="projects-systems" class="page-section" data-theme="systems">
+            <div class="page-content-wrapper">
+                <div class="container systems-page-container">
+                    <div class="category-showcase-header">
+                        <span class="section-badge">Engineering & Logic</span>
+                        <h3><i class="fas fa-network-wired"></i> Academic & Systems</h3>
+                        <p>Engineering-focused projects built through low-level assembly, networking and computer science concepts.</p>
+                    </div>
+
+                    <!-- Align 3 centered cards in one row -->
+                    <div class="systems-projects-row" id="systems-projects-grid">
+                        <!-- Dynamic Academic cards rendered via Javascript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 07: EXPERIENCE & EDUCATION & CERTIFICATIONS (REDESIGNED LAYOUT) -->
+        <section id="experience" class="page-section" data-theme="experience">
+            <div class="page-content-wrapper">
+                <div class="container experience-redesign-container">
+                    <div class="section-header">
+                        <span class="section-badge">Track Record</span>
+                        <h2 class="section-title-alt">Experience & Education</h2>
+                    </div>
+                                 <!-- ROW 3: Certifications Carousel -->
+                    <div class="certs-section-new">
+                        <div class="certs-header-new">
+                            <h3 class="certs-title-new"><i class="fas fa-award"></i> Certifications</h3>
+                        </div>
+                        
+                        <div class="certs-carousel-outer">
+                            <div class="certs-carousel-track" id="certs-list-grid">
+                                <!-- DecodeLabs -->
+                                <div class="cert-item cert-card-compact">
+                                    <div class="cert-card-image-wrapper">
+                                        <img src="public/certificates/decodelabs-certificate.jpg" alt="DecodeLabs Internship Certificate" onerror="this.src='images/ieee-certificate.jpeg';">
+                                    </div>
+                                    <div class="cert-card-body">
+                                        <h5>DecodeLabs Internship Certificate</h5>
+                                        <p class="cert-issuer">DecodeLabs</p>
+                                        <button class="btn btn-primary btn-mini view-cert-btn" data-cert-image="public/certificates/decodelabs-certificate.jpg"><i class="fas fa-file-invoice"></i> View Certificate</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- DevByte -->
+                                <div class="cert-item cert-card-compact">
+                                    <div class="cert-card-image-wrapper">
+                                        <img src="public/certificates/devbyte-certificate.png" alt="DevByte Internship Certificate" onerror="this.src='images/ieee-certificate.jpeg';">
+                                    </div>
+                                    <div class="cert-card-body">
+                                        <h5>DevByte Internship Certificate</h5>
+                                        <p class="cert-issuer">DevByte</p>
+                                        <button class="btn btn-primary btn-mini view-cert-btn" data-cert-image="public/certificates/devbyte-certificate.png"><i class="fas fa-file-invoice"></i> View Certificate</button>
+                                    </div>
+                                </div>
+
+                                <!-- Google 1 -->
+                                <div class="cert-item cert-card-compact">
+                                    <div class="cert-card-image-wrapper">
+                                        <img src="public/certificates/google%20ai%20essentials.png" alt="Google Data Analytics Professional Certificate" onerror="this.src='images/ieee-certificate.jpeg';">
+                                    </div>
+                                    <div class="cert-card-body">
+                                        <h5>Google AI essentials</h5>
+                                        <p class="cert-issuer">Google Career Certificates</p>
+                                        <button class="btn btn-primary btn-mini view-cert-btn" data-cert-image="public/certificates/google%20ai%20essentials.png"><i class="fas fa-file-invoice"></i> View Certificate</button>
+                                    </div>
+                                </div>
+
+                                <!-- Google 2 -->
+                                <div class="cert-item cert-card-compact">
+                                    <div class="cert-card-image-wrapper">
+                                        <img src="public/certificates/google%20prompt.png" alt="Google UX Design Professional Certificate" onerror="this.src='images/ieee-certificate.jpeg';">
+                                    </div>
+                                    <div class="cert-card-body">
+                                        <h5>Google  Prompt Engineering</h5>
+                                        <p class="cert-issuer">Google Career Certificates</p>
+                                        <button class="btn btn-primary btn-mini view-cert-btn" data-cert-image="public/certificates/google%20prompt.png"><i class="fas fa-file-invoice"></i> View Certificate</button>
+                                    </div>
+                                </div>
+
+                                <!-- IEEE -->
+                                <div class="cert-item cert-card-compact">
+                                    <div class="cert-card-image-wrapper">
+                                        <img src="public/certificates/ieee-certificate.jpeg" alt="IEEE Certificate of Participation" onerror="this.src='images/ieee-certificate.jpeg';">
+                                    </div>
+                                    <div class="cert-card-body">
+                                        <h5>IEEE Certificate of Participation</h5>
+                                        <p class="cert-issuer">IEEE Student Branch</p>
+                                        <button class="btn btn-primary btn-mini view-cert-btn" data-cert-image="public/certificates/ieee-certificate.jpeg"><i class="fas fa-file-invoice"></i> View Certificate</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3D Carousel Controls placed below the slider -->
+                        <div class="certs-carousel-controls">
+                            <button class="carousel-arrow-btn prev-arrow" id="cert-prev" aria-label="Previous Certificate"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-arrow-btn next-arrow" id="cert-next" aria-label="Next Certificate"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 08: CONTACT -->
+        <section id="contact" class="page-section" data-theme="contact">
+            <div class="page-content-wrapper">
+                <div class="container contact-page-container">
+                    <div class="contact-inner-wrapper">
+                        <div class="contact-header">
+                            <h2 class="contact-title">Let's Build Something Great</h2>
+                            <p class="contact-description">Have a project, opportunity, or collaboration in mind? I'd love to hear from you. Get in touch via any of the channels below.</p>
+                        </div>
+                        
+                        <div class="contact-links-grid">
+                            <!-- EMAIL (Pink) -->
+                            <a href="mailto:nimra.shehzadi.5094@gmail.com" class="contact-card card-email" aria-label="Send Email">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                                <h4>nimra.shehzadi.5094@gmail.com</h4>
+                                <p class="card-desc">Let's talk about a project</p>
+                            </a>
+
+                            <!-- LINKEDIN (Cyan/Blue) -->
+                            <a href="https://www.linkedin.com/in/nimra-shehzadi-22262338a/" target="_blank" class="contact-card card-linkedin" aria-label="LinkedIn Profile">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                                <h4>Connect Profile</h4>
+                                <p class="card-desc">Professional networking</p>
+                            </a>
+
+                            <!-- GITHUB (Purple) -->
+                            <a href="https://github.com/Nimra-shehzadi" target="_blank" class="contact-card card-github" aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                                <h4>Visit Profile</h4>
+                                <p class="card-desc">Explore open-source code</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Footer -->
+                    <footer>
+                        <div class="footer-content">
+                            <div class="footer-copy">
+                                &copy; 2026 Nimra Shehzadi. All rights reserved.
+                            </div>
+                            <div class="footer-socials">
+                                <a href="https://github.com/Nimra-shehzadi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/nimra-shehzadi-22262338a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="mailto:nimra.shehzadi.5094@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Academic Detail Modals -->
+    <div id="cisco-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cisco-modal-title">
+        <div class="modal-content">
+            <span class="modal-close-button cisco-modal-close" aria-label="Close Details Modal">&times;</span>
+            <h3 id="cisco-modal-title" class="modal-title">Cisco Packet Tracer Simulations</h3>
+            <ul class="modal-list">
+                <li>Configure OSPF Routing</li>
+                <li>DHCP & Email Server Integration</li>
+                <li>Wireless Network configurations</li>
+                <li>FTP and DHCP Service setups</li>
+                <li>IoT Smart Home simulations</li>
+                <li>Peer-to-Peer Network infrastructure</li>
+                <li>Inter-Network Router communication</li>
+                <li>VLAN configuration & subnetting</li>
+                <li>RIP Routing configurations</li>
+                <li>Simulating HTTP and Web servers</li>
+                <li>Star Topology architectures</li>
+                <li>Wireless Access Point connectivity</li>
+                <li>Multi-network subnet data routing</li>
+                <li>Telnet remote access management</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="asm-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="asm-modal-title">
+        <div class="modal-content">
+            <span class="modal-close-button asm-modal-close" aria-label="Close Details Modal">&times;</span>
+            <h3 id="asm-modal-title" class="modal-title">Assembly Language Programs</h3>
+            <ul class="modal-list">
+                <li>BMI Health Calculator</li>
+                <li>Digital Real-Time Clock</li>
+                <li>Even Or Odd checker</li>
+                <li>Console-based Maze Game</li>
+                <li>Random Number Guessing Game</li>
+                <li>Arithmetic Calculator</li>
+                <li>Student Record database script</li>
+                <li>Tic-Tac-Toe arcade game</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="python-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="python-modal-title">
+        <div class="modal-content">
+            <span class="modal-close-button python-modal-close" aria-label="Close Details Modal">&times;</span>
+            <h3 id="python-modal-title" class="modal-title">Python Scripts & Games</h3>
+            <ul class="modal-list">
+                <li>Snake arcade game using Pygame</li>
+                <li>Interactive Crossword Puzzle generator</li>
+                <li>Input to Output data pipe scripting</li>
+                <li>Video Downloader utility tool</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Certificate Image Viewer Modal -->
+    <div id="certificate-modal" class="modal" role="dialog" aria-modal="true" aria-label="Certificate Image Viewer">
+        <div class="modal-content modal-content-cert">
+            <span class="modal-close-button cert-modal-close" aria-label="Close Viewer">&times;</span>
+            <img id="certificate-image" src="" alt="Certificate View">
+        </div>
+    </div>
+
+    <!-- Custom Script Module -->
+    <script src="script.js" defer></script>
+</body>
+</html>
