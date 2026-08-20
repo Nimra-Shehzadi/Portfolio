@@ -155,6 +155,4 @@ We utilize a dark cyberpunk palette to achieve a modern, premium aesthetic:
 
 
 
-#### 3. Low-Level Development & Systems
-* **FlyRank**: High-performance sorting simulator.
-  ![FlyRank Project Screenshot](public/projects/flyrank.png)
+
